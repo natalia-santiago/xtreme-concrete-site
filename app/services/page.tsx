@@ -49,7 +49,7 @@ const faqs = [
 
 export default function ServicesPage() {
   return (
-    <main className="mx-auto max-w-6xl px-4 py-14">
+    <main className="mx-auto max-w-7xl px-4 py-14">
       {/* Hero */}
       <header className="grid gap-8 lg:grid-cols-2 lg:items-center">
         <div>

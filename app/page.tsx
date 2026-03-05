@@ -21,7 +21,7 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="bg-[#0d0d0d] text-white">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 md:grid-cols-2 md:items-center">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-24 md:grid-cols-2 md:items-center">
           <div>
             <p className="text-sm tracking-widest text-white/70">GOLDSBORO, NC</p>
 
@@ -93,7 +93,7 @@ export default function Home() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="mx-auto max-w-6xl px-4 py-14">
+      <section className="mx-auto max-w-7xl px-4 py-14">
         <h2 className="text-2xl font-bold">How it works</h2>
         <p className="mt-2 text-sm text-black/70">Simple, straightforward process.</p>
 
@@ -109,7 +109,7 @@ export default function Home() {
       </section>
 
       {/* SERVICES */}
-      <section className="mx-auto max-w-6xl px-4 pb-14">
+      <section className="mx-auto max-w-7xl px-4 pb-14">
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
             <h2 className="text-2xl font-bold">Services</h2>
@@ -160,7 +160,7 @@ export default function Home() {
 
       {/* CTA */}
       <section className="bg-[#c1121f] text-white">
-        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-4 py-12 md:flex-row md:items-center">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-4 py-12 md:flex-row md:items-center">
           <div>
             <h3 className="text-2xl font-bold">
               Need Concrete Cutting or Demolition?

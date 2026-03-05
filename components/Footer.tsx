@@ -29,7 +29,7 @@ const serviceAreas = [
 export default function Footer() {
   return (
     <footer className="bg-[#0d0d0d] text-white">
-      <div className="mx-auto max-w-6xl px-4 py-12">
+      <div className="mx-auto max-w-7xl px-4 py-12">
         <div className="grid gap-10 md:grid-cols-4">
           {/* Brand */}
           <div>

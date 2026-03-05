@@ -28,7 +28,7 @@ const bullets = [
       <>
         {/* HERO */}
         <section className="bg-[#0d0d0d] text-white">
-          <div className="mx-auto max-w-6xl px-4 py-14">
+          <div className="mx-auto max-w-7xl px-4 py-14">
             <p className="text-sm tracking-widest text-white/70">ABOUT</p>
             <h1 className="mt-3 text-4xl font-extrabold leading-tight md:text-5xl">
               Built for clean cuts, safe work,
@@ -71,7 +71,7 @@ const bullets = [
         </section>
   
         {/* CONTENT */}
-        <section className="mx-auto max-w-6xl px-4 py-14">
+        <section className="mx-auto max-w-7xl px-4 py-14">
           <div className="grid gap-10 md:grid-cols-2 md:items-start">
             {/* What we do */}
             <div className="rounded-2xl border border-black/10 p-6 shadow-sm">

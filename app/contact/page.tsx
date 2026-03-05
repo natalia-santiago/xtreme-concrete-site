@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Contact() {
   return (
-    <main className="mx-auto max-w-6xl px-4 py-14">
+    <main className="mx-auto max-w-7xl px-4 py-14">
       <header className="max-w-3xl">
         <h1 className="text-3xl font-bold">Request a Quote</h1>
         <p className="mt-2 text-black/70">

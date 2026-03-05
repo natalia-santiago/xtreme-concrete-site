@@ -7,7 +7,7 @@ type Props = {
 
 export default function Testimonials({ compact = false }: Props) {
   return (
-    <section className={compact ? "mx-auto max-w-6xl px-4 pb-14" : "mx-auto max-w-6xl px-4 py-14"}>
+    <section className={compact ? "mx-auto max-w-7xl px-4 pb-14" : "mx-auto max-w-7xl px-4 py-14"}>
       <div className="rounded-2xl border border-black/10 p-6 shadow-sm">
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>

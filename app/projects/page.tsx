@@ -21,7 +21,7 @@ const process = [
 
 export default function ProjectsPage() {
   return (
-    <main className="mx-auto max-w-6xl px-4 py-14">
+    <main className="mx-auto max-w-7xl px-4 py-14">
       <header className="max-w-3xl">
         <h1 className="text-3xl font-bold">Projects</h1>
         <p className="mt-2 text-black/70">
