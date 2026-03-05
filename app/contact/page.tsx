@@ -1,15 +1,21 @@
 import Link from "next/link";
 
 export default function Contact() {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    // allow the browser to perform a normal POST
+    const form = e.currentTarget;
+    form.submit();
+  }
+
   return (
     <section className="mx-auto max-w-3xl px-4 py-14">
       <h1 className="text-3xl font-bold">Request a Quote</h1>
+
       <p className="mt-2 text-black/70">
         Tell us what you need and we’ll get back to you. For fast help, call{" "}
         <a className="font-semibold text-[#c1121f]" href="tel:+19194292619">
           (919) 429-2619
-        </a>
-        .
+        </a>.
       </p>
 
       <p className="mt-2 text-sm text-black/60">
@@ -18,19 +24,18 @@ export default function Contact() {
       </p>
 
       <div className="mt-8 rounded-2xl border border-black/10 p-6 shadow-sm">
-        {/* Netlify-friendly form + redirect + spam honeypot */}
         <form
           name="quote"
           method="POST"
           action="/thank-you"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
         >
-          {/* Required hidden input for Netlify */}
+          {/* Netlify required hidden field */}
           <input type="hidden" name="form-name" value="quote" />
-          <input type="hidden" name="subject" value="New Quote Request" />
 
-          {/* Honeypot (hidden spam protection) */}
+          {/* Honeypot */}
           <p className="hidden">
             <label>
               Don’t fill this out: <input name="bot-field" />
@@ -108,12 +113,8 @@ export default function Contact() {
                 required
                 rows={5}
                 className="mt-1 w-full rounded-lg border border-black/15 px-3 py-2 text-sm"
-                placeholder="Tell us the service needed (core drilling, slab cutting, wall cutting, reinforced cutting, demolition), timeline, and any access notes."
+                placeholder="Tell us the service needed, timeline, and any notes."
               />
-              <p className="mt-2 text-xs text-black/60">
-                Tip: Photos help a lot. After you submit, we can tell you the
-                best way to send them.
-              </p>
             </div>
 
             <button
@@ -125,18 +126,13 @@ export default function Contact() {
 
             <p className="text-xs text-black/60">
               Need help fast? Call{" "}
-              <a className="font-semibold text-[#c1121f]" href="tel:+19194292619">
+              <a
+                className="font-semibold text-[#c1121f]"
+                href="tel:+19194292619"
+              >
                 (919) 429-2619
               </a>{" "}
               for quickest scheduling.
-            </p>
-
-            <p className="text-xs text-black/60">
-              Prefer phone? Call{" "}
-              <a className="font-semibold text-[#c1121f]" href="tel:+19194292619">
-                (919) 429-2619
-              </a>{" "}
-              any time.
             </p>
           </div>
         </form>
