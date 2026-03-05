@@ -1,51 +1,7 @@
 // app/contact/page.tsx
-"use client";
-
 import Link from "next/link";
-import { useState } from "react";
-
-function encode(data: Record<string, string>) {
-  return Object.keys(data)
-    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key] ?? "")}`)
-    .join("&");
-}
 
 export default function Contact() {
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("submitting");
-
-    const form = e.currentTarget;
-
-    const formData = new FormData(form);
-    const data: Record<string, string> = {};
-    formData.forEach((value, key) => {
-      data[key] = String(value);
-    });
-
-    // Required by Netlify Forms
-    data["form-name"] = "quote";
-
-    try {
-      // Post to the same route as the form page (more reliable for Netlify + Next)
-      const res = await fetch("/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode(data),
-      });
-
-      if (!res.ok) throw new Error(`Netlify forms POST failed: ${res.status}`);
-
-      setStatus("success");
-      window.location.assign("/thank-you");
-    } catch (err) {
-      console.error(err);
-      setStatus("error");
-    }
-  }
-
   return (
     <section className="mx-auto max-w-3xl px-4 py-14">
       <h1 className="text-3xl font-bold">Request a Quote</h1>
@@ -63,6 +19,7 @@ export default function Contact() {
       </p>
 
       <div className="mt-8 rounded-2xl border border-black/10 p-6 shadow-sm">
+        {/* Plain HTML submit (no JS). This MUST produce a POST request in Network. */}
         <form
           name="quote"
           method="POST"
@@ -70,7 +27,6 @@ export default function Contact() {
           encType="application/x-www-form-urlencoded"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          onSubmit={handleSubmit}
           className="space-y-4"
         >
           {/* Required for Netlify */}
@@ -162,19 +118,12 @@ export default function Contact() {
             />
           </div>
 
-          {status === "error" && (
-            <p className="text-sm text-red-600">
-              Something went wrong sending your request. Please try again or call (919) 429-2619.
-            </p>
-          )}
-
           <div className="flex items-center gap-3">
             <button
               type="submit"
-              disabled={status === "submitting"}
-              className="rounded-xl bg-[#c1121f] px-5 py-2.5 font-semibold text-white shadow-sm hover:opacity-95 disabled:opacity-60"
+              className="rounded-xl bg-[#c1121f] px-5 py-2.5 font-semibold text-white shadow-sm hover:opacity-95"
             >
-              {status === "submitting" ? "Sending..." : "Send Request"}
+              Send Request
             </button>
 
             <Link className="text-sm text-black/60 hover:underline" href="/">
