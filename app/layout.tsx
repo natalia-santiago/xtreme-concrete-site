@@ -9,39 +9,57 @@ export const metadata = {
   metadataBase: new URL(SITE_URL),
 
   alternates: {
-    canonical: "/",
+    canonical: SITE_URL,
   },
 
   title: {
-    default: "Xtreme Concrete Cutting & Demolition | Goldsboro NC",
+    default: "Xtreme Concrete Cutting & Demolition | Goldsboro, NC",
     template: "%s | Xtreme Concrete Cutting",
   },
 
   description:
-    "Concrete cutting, core drilling, slab cutting, and demolition services in Goldsboro, NC and surrounding areas. Fast scheduling and precision work.",
+    "Concrete cutting, core drilling, slab cutting, wall cutting, reinforced concrete cutting, and demolition services in Goldsboro, NC and Eastern North Carolina. Fast response, safety-first work, and clean accurate cuts.",
 
   keywords: [
     "concrete cutting Goldsboro NC",
     "core drilling Goldsboro NC",
     "concrete demolition Goldsboro NC",
-    "slab cutting North Carolina",
-    "wall cutting NC",
+    "slab cutting Goldsboro NC",
+    "wall cutting Goldsboro NC",
+    "reinforced concrete cutting NC",
+    "concrete cutting Eastern North Carolina",
+    "Wayne County concrete cutting",
+    "Wilson NC concrete cutting",
+    "Kinston NC concrete cutting",
+    "Smithfield NC concrete cutting",
+    "Selma NC concrete cutting",
   ],
 
   icons: {
     icon: "/favicon.ico",
   },
 
+  // Optional but recommended for a real business site
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+
   openGraph: {
     title: "Xtreme Concrete Cutting & Demolition",
-    description: "Concrete cutting, core drilling, and demolition services in Goldsboro, NC.",
+    description:
+      "Concrete cutting, core drilling, and demolition services in Goldsboro, NC and surrounding areas.",
     url: SITE_URL,
     siteName: "Xtreme Concrete Cutting",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.jpg", // becomes absolute using metadataBase
         width: 1200,
         height: 630,
         alt: "Xtreme Concrete Cutting & Demolition",
@@ -52,7 +70,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Xtreme Concrete Cutting & Demolition",
-    description: "Concrete cutting, core drilling, and demolition services in Goldsboro, NC.",
+    description:
+      "Concrete cutting, core drilling, and demolition services in Goldsboro, NC and surrounding areas.",
     images: ["/og-image.jpg"],
   },
 };
@@ -65,6 +84,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     url: SITE_URL,
     telephone: "+1-919-429-2619",
     email: "xtreme.concretecutting.demo@gmail.com",
+
+    // Optional: helps Google understand what you do (safe to include)
+    description:
+      "Concrete cutting, core drilling, slab cutting, wall cutting, reinforced concrete cutting, and demolition services in Goldsboro, NC and Eastern North Carolina.",
+
     areaServed: [
       "Goldsboro, NC",
       "Wayne County, NC",
@@ -74,12 +98,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "Kinston, NC",
       "Eastern North Carolina",
     ],
+
     address: {
       "@type": "PostalAddress",
       addressLocality: "Goldsboro",
       addressRegion: "NC",
       addressCountry: "US",
     },
+
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -88,6 +114,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         closes: "18:00",
       },
     ],
+
     makesOffer: [
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Core Drilling" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Concrete Slab Cutting" } },
