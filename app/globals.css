@@ -34,3 +34,19 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* --- Advanced Concrete-like hero texture (no image needed) --- */
+.hero-industrial {
+  background:
+    radial-gradient(1000px 600px at 65% 30%, rgba(193, 18, 31, 0.18), transparent 60%),
+    radial-gradient(900px 600px at 20% 60%, rgba(255, 255, 255, 0.08), transparent 55%),
+    linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 35%, rgba(0,0,0,0.25) 100%),
+    repeating-linear-gradient(
+      135deg,
+      rgba(255,255,255,0.06) 0px,
+      rgba(255,255,255,0.06) 1px,
+      transparent 1px,
+      transparent 10px
+    ),
+    #0d0d0d;
+}
