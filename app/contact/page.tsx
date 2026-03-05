@@ -25,9 +25,12 @@ export default function Contact() {
           action="/thank-you"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
+          netlify
         >
           {/* Required hidden input for Netlify */}
           <input type="hidden" name="form-name" value="quote" />
+          {/* Optional: helps with notifications/email subject in Netlify */}
+          <input type="hidden" name="subject" value="New Quote Request" />
 
           {/* Honeypot (hidden) */}
           <p className="hidden">
