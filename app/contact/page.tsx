@@ -20,12 +20,14 @@ export default function Contact() {
       <div className="mt-8 rounded-2xl border border-black/10 p-6 shadow-sm">
         {/* Netlify-friendly form + redirect + spam honeypot */}
         <form
-          name="quote"
-          method="POST"
-          action="/thank-you"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-        >
+  name="quote"
+  method="POST"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+  action="/contact/thanks"
+>
+  <input type="hidden" name="form-name" value="quote" />
+  <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="quote" />
 
           {/* Honeypot (hidden) */}
