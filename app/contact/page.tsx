@@ -25,14 +25,12 @@ export default function Contact() {
           action="/thank-you"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          netlify
         >
           {/* Required hidden input for Netlify */}
           <input type="hidden" name="form-name" value="quote" />
-          {/* Optional: helps with notifications/email subject in Netlify */}
           <input type="hidden" name="subject" value="New Quote Request" />
 
-          {/* Honeypot (hidden) */}
+          {/* Honeypot (hidden spam protection) */}
           <p className="hidden">
             <label>
               Don’t fill this out: <input name="bot-field" />
@@ -83,9 +81,7 @@ export default function Contact() {
 
             <div className="grid gap-4 sm:grid-cols-2">
               <div>
-                <label className="text-sm font-semibold">
-                  Approx. Dimensions
-                </label>
+                <label className="text-sm font-semibold">Approx. Dimensions</label>
                 <input
                   name="dimensions"
                   className="mt-1 w-full rounded-lg border border-black/15 px-3 py-2 text-sm"
@@ -127,13 +123,9 @@ export default function Contact() {
               Submit Request
             </button>
 
-            {/* Conversion boost lines */}
             <p className="text-xs text-black/60">
               Need help fast? Call{" "}
-              <a
-                className="font-semibold text-[#c1121f]"
-                href="tel:+19194292619"
-              >
+              <a className="font-semibold text-[#c1121f]" href="tel:+19194292619">
                 (919) 429-2619
               </a>{" "}
               for quickest scheduling.
@@ -141,10 +133,7 @@ export default function Contact() {
 
             <p className="text-xs text-black/60">
               Prefer phone? Call{" "}
-              <a
-                className="font-semibold text-[#c1121f]"
-                href="tel:+19194292619"
-              >
+              <a className="font-semibold text-[#c1121f]" href="tel:+19194292619">
                 (919) 429-2619
               </a>{" "}
               any time.

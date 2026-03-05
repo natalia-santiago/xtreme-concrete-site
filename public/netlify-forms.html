@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Netlify Forms</title>
+  </head>
+  <body>
+    <!--
+      Hidden static form for Netlify build-time detection.
+      This makes Netlify Forms work reliably with Next.js builds.
+    -->
+    <form
+      name="quote"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      hidden
+    >
+      <input type="hidden" name="form-name" value="quote" />
+      <p>
+        <label>Don’t fill this out: <input name="bot-field" /></label>
+      </p>
+
+      <input type="text" name="name" />
+      <input type="tel" name="phone" />
+      <input type="email" name="email" />
+      <input type="text" name="location" />
+      <input type="text" name="dimensions" />
+      <input type="text" name="thickness" />
+      <textarea name="message"></textarea>
+    </form>
+  </body>
+</html>
