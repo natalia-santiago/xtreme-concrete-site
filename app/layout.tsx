@@ -7,9 +7,19 @@ const SITE_URL = "https://xtremeconcretecutting.com"; // update later if needed
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Xtreme Concrete Cutting & Demolition | Goldsboro NC",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  title: {
+    default: "Xtreme Concrete Cutting & Demolition | Goldsboro NC",
+    template: "%s | Xtreme Concrete Cutting",
+  },
+
   description:
     "Concrete cutting, core drilling, slab cutting, and demolition services in Goldsboro, NC and surrounding areas. Fast scheduling and precision work.",
+
   keywords: [
     "concrete cutting Goldsboro NC",
     "core drilling Goldsboro NC",
@@ -17,13 +27,40 @@ export const metadata = {
     "slab cutting North Carolina",
     "wall cutting NC",
   ],
+
+  icons: {
+    icon: "/favicon.ico",
+  },
+
+  openGraph: {
+    title: "Xtreme Concrete Cutting & Demolition",
+    description: "Concrete cutting, core drilling, and demolition services in Goldsboro, NC.",
+    url: SITE_URL,
+    siteName: "Xtreme Concrete Cutting",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Xtreme Concrete Cutting & Demolition",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Xtreme Concrete Cutting & Demolition",
+    description: "Concrete cutting, core drilling, and demolition services in Goldsboro, NC.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // LocalBusiness Schema
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     name: "Xtreme Concrete Cutting & Demolition LLC",
     url: SITE_URL,
     telephone: "+1-919-429-2619",
@@ -60,7 +97,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     ],
   };
 
-  // Website Schema
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -76,14 +112,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="bg-white text-[#0d0d0d]">
-
-        {/* LocalBusiness Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
-
-        {/* Website Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
