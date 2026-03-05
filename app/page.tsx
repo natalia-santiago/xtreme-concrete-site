@@ -8,11 +8,31 @@ const serviceStrip = [
 ];
 
 const services = [
-  { title: "Core Drilling", desc: "Precision drilling for plumbing, electrical, HVAC, and structural penetrations." },
-  { title: "Concrete Slab Cutting", desc: "Flat sawing for floors, roads, driveways, and commercial slabs." },
-  { title: "Concrete Wall Cutting", desc: "Clean openings for doors, windows, and utilities in concrete walls." },
-  { title: "Reinforced Wall Cutting", desc: "Specialized cutting for heavily reinforced structural concrete." },
-  { title: "Building Demolition", desc: "Safe demolition and concrete removal for renovation and rebuild projects." },
+  {
+    title: "Core Drilling",
+    desc: "Precision drilling for plumbing, electrical, HVAC, and structural penetrations.",
+    bullets: ["Utility penetrations", "HVAC + plumbing holes", "Electrical conduit runs"],
+  },
+  {
+    title: "Concrete Slab Cutting",
+    desc: "Flat sawing for floors, roads, driveways, and commercial slabs.",
+    bullets: ["Trench cuts", "Slab removal sections", "Clean straight cuts"],
+  },
+  {
+    title: "Concrete Wall Cutting",
+    desc: "Clean openings for doors, windows, and utilities in concrete walls.",
+    bullets: ["Door + window openings", "Access points", "Utility pass-throughs"],
+  },
+  {
+    title: "Reinforced Wall Cutting",
+    desc: "Specialized cutting for heavily reinforced structural concrete.",
+    bullets: ["Rebar + structural work", "Controlled cuts", "Minimal overcut"],
+  },
+  {
+    title: "Building Demolition",
+    desc: "Safe demolition and concrete removal for renovation and rebuild projects.",
+    bullets: ["Removal + hauling", "Site cleanup", "Prep for next phase"],
+  },
 ];
 
 export default function Home() {
@@ -95,7 +115,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICE STRIP (like Advanced Concrete icons row) */}
+      {/* SERVICE STRIP */}
       <section className="bg-[#ededed] border-y border-black/10">
         <div className="mx-auto grid w-full max-w-[1400px] grid-cols-1 gap-3 px-6 py-5 sm:grid-cols-3">
           {serviceStrip.map((item) => (
@@ -110,13 +130,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT SPLIT (no photo, but structured like theirs) */}
+      {/* WHO WE ARE (NO EMPTY PHOTO BOX) */}
       <section className="bg-white">
-        <div className="mx-auto grid w-full max-w-[1400px] gap-10 px-6 py-12 md:grid-cols-2 md:items-center">
+        <div className="mx-auto grid w-full max-w-[1400px] gap-10 px-6 py-12 md:grid-cols-2 md:items-start">
           <div>
             <h2 className="text-2xl font-extrabold uppercase tracking-wide">Who we are</h2>
+
             <p className="mt-3 text-sm text-black/70">
-              Xtreme Concrete Cutting & Demolition LLC is based in Goldsboro, NC and serves
+              Xtreme Concrete Cutting &amp; Demolition LLC is based in Goldsboro, NC and serves
               surrounding areas across Eastern North Carolina. We focus on safe methods, clean results,
               and clear communication from quote to completion.
             </p>
@@ -125,7 +146,21 @@ export default function Home() {
               We’re a new company building our online portfolio — references are available on request.
             </p>
 
-            <div className="mt-5">
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              {[
+                ["Safety-first", "Jobsite awareness and controlled work practices."],
+                ["Quality", "Clean cuts, tidy work areas, and solid communication."],
+                ["Reliability", "Clear estimates and scheduling updates."],
+                ["Service area", "Goldsboro + surrounding Eastern NC."],
+              ].map(([title, desc]) => (
+                <div key={title} className="rounded-2xl border border-black/10 bg-black/[0.02] p-5">
+                  <div className="text-xs font-bold uppercase tracking-wide text-[#c1121f]">{title}</div>
+                  <div className="mt-2 text-sm text-black/70">{desc}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6">
               <Link
                 href="/about"
                 className="inline-block rounded-md bg-[#c1121f] px-5 py-3 text-xs font-bold uppercase tracking-wide text-white hover:bg-[#8f0e16]"
@@ -135,17 +170,44 @@ export default function Home() {
             </div>
           </div>
 
-          {/* “image” placeholder styled block */}
-          <div className="rounded-2xl border border-black/10 bg-gradient-to-br from-black/[0.08] to-black/[0.02] p-6">
-            <div className="aspect-[16/10] w-full rounded-xl border border-black/10 bg-white" />
-            <p className="mt-3 text-xs text-black/60">
-              Add jobsite photos here when available (optional).
-            </p>
+          {/* Right column becomes a “capabilities” panel instead of a fake photo */}
+          <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+            <div className="h-1 w-12 rounded bg-[#c1121f]" />
+            <h3 className="mt-4 text-lg font-extrabold uppercase tracking-wide">What to expect</h3>
+
+            <ul className="mt-4 space-y-3 text-sm text-black/70">
+              <li>• Quick response and clear communication</li>
+              <li>• Safe work practices and tidy cleanup</li>
+              <li>• Accurate cuts with attention to layout and finish</li>
+              <li>• A straightforward estimate and schedule</li>
+            </ul>
+
+            <div className="mt-6 rounded-xl border border-black/10 bg-black/[0.02] p-4">
+              <p className="text-xs font-bold uppercase tracking-wide">Need a quote today?</p>
+              <p className="mt-2 text-sm text-black/70">
+                Call or send details through the request form — we’ll respond quickly.
+              </p>
+
+              <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+                <Link
+                  href="/contact"
+                  className="rounded-md bg-[#c1121f] px-5 py-3 text-xs font-bold uppercase tracking-wide text-white text-center"
+                >
+                  Request a Quote
+                </Link>
+                <a
+                  href="tel:+19194292619"
+                  className="rounded-md border border-black/10 px-5 py-3 text-xs font-bold uppercase tracking-wide text-center hover:bg-black/[0.02]"
+                >
+                  Call Now
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* SERVICES WE OFFER (like theirs) */}
+      {/* SERVICES WE OFFER (NO TOP “PHOTO” BOXES) */}
       <section className="bg-[#f3f3f3] border-y border-black/10">
         <div className="mx-auto w-full max-w-[1400px] px-6 py-12">
           <h2 className="text-center text-2xl font-extrabold uppercase tracking-wide">
@@ -154,27 +216,35 @@ export default function Home() {
 
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {services.map((s) => (
-              <div key={s.title} className="rounded-2xl border border-black/10 bg-white shadow-sm">
-                {/* “image” area (no photos needed) */}
-                <div className="h-40 rounded-t-2xl bg-gradient-to-br from-black/[0.10] to-black/[0.03]" />
-                <div className="p-6">
-                  <div className="text-sm font-extrabold uppercase tracking-wide">{s.title}</div>
-                  <p className="mt-2 text-sm text-black/70">{s.desc}</p>
-
-                  <div className="mt-5 flex gap-3">
-                    <Link
-                      href="/contact"
-                      className="rounded-md bg-[#c1121f] px-4 py-2 text-xs font-bold uppercase tracking-wide text-white hover:bg-[#8f0e16]"
-                    >
-                      Get a Quote
-                    </Link>
-                    <Link
-                      href="/services"
-                      className="rounded-md border border-black/10 px-4 py-2 text-xs font-bold uppercase tracking-wide hover:bg-black/[0.02]"
-                    >
-                      Learn More
-                    </Link>
+              <div key={s.title} className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 h-10 w-10 rounded-full bg-black/10" />
+                  <div className="min-w-0">
+                    <div className="h-1 w-10 rounded bg-[#c1121f]" />
+                    <div className="mt-3 text-sm font-extrabold uppercase tracking-wide">{s.title}</div>
+                    <p className="mt-2 text-sm text-black/70">{s.desc}</p>
                   </div>
+                </div>
+
+                <ul className="mt-4 space-y-1 text-sm text-black/70">
+                  {s.bullets.map((b) => (
+                    <li key={b}>• {b}</li>
+                  ))}
+                </ul>
+
+                <div className="mt-5 flex gap-3">
+                  <Link
+                    href="/contact"
+                    className="rounded-md bg-[#c1121f] px-4 py-2 text-xs font-bold uppercase tracking-wide text-white hover:bg-[#8f0e16]"
+                  >
+                    Get a Quote
+                  </Link>
+                  <Link
+                    href="/services"
+                    className="rounded-md border border-black/10 px-4 py-2 text-xs font-bold uppercase tracking-wide hover:bg-black/[0.02]"
+                  >
+                    Learn More
+                  </Link>
                 </div>
               </div>
             ))}
