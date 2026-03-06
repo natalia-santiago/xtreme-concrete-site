@@ -192,16 +192,16 @@ export default function Home() {
 
       {/* EQUIPMENT */}
       <section className="mx-auto max-w-[1400px] px-4 py-14 md:px-6">
-  <div className="grid items-start gap-10 lg:grid-cols-2">
+  <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
 
-    {/* LEFT IMAGE */}
+    {/* LEFT COLUMN IMAGE */}
     <div className="overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm">
       <Image
         src="/images/core-drilling-rig.png"
         alt="Professional core drilling machine"
         width={1200}
         height={900}
-        className="w-full object-cover"
+        className="w-full object-cover object-center"
         sizes="(max-width: 768px) 100vw, 50vw"
       />
     </div>
@@ -218,22 +218,24 @@ export default function Home() {
           The right equipment for clean, precise results
         </h2>
 
-        <p className="mt-4 max-w-2xl text-base leading-7 text-black/75">
+        <p className="mt-4 text-base leading-7 text-black/75">
           We use professional-grade equipment to deliver accurate core drilling
           and concrete cutting work with efficiency, safety, and attention to
           detail.
         </p>
 
-        <p className="mt-4 max-w-2xl text-base leading-7 text-black/75">
+        <p className="mt-4 text-base leading-7 text-black/75">
           The right tools help us complete each project with cleaner cuts,
           better control, and dependable results for residential, commercial,
           and industrial jobs.
         </p>
 
+        {/* WHY IT MATTERS */}
         <div className="mt-6 rounded-2xl border border-black/10 bg-[#f7f7f7] p-5">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#c1121f]">
             Why it matters
           </p>
+
           <p className="mt-3 text-base leading-7 text-black/70">
             Professional equipment helps us work with greater precision,
             cleaner finishes, and better efficiency on a wide range of
@@ -249,7 +251,7 @@ export default function Home() {
           alt="Concrete core drilling in action"
           width={1200}
           height={900}
-          className="w-full object-cover"
+          className="w-full object-cover object-center"
           sizes="(max-width: 768px) 100vw, 50vw"
         />
       </div>
