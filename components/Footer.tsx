@@ -3,9 +3,14 @@ import Link from "next/link";
 export default function Footer() {
   const year = new Date().getFullYear();
 
+  // Optional: show this only when you have a real Google Business Profile link.
+  // Set in Netlify env vars when ready:
+  // NEXT_PUBLIC_GOOGLE_BUSINESS_URL = https://g.page/r/....
+  const GOOGLE_BUSINESS_URL = process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_URL?.trim();
+
   return (
     <footer className="bg-[#0d0d0d] text-white">
-      <div className="mx-auto grid w-full max-w-[1400px] gap-8 px-6 py-12 md:grid-cols-4">
+      <div className="mx-auto grid w-full max-w-6xl gap-8 px-6 py-12 md:grid-cols-4">
         <div>
           <p className="text-lg font-bold">
             XTREME <span className="text-[#c1121f]">CONCRETE</span>
@@ -20,25 +25,32 @@ export default function Footer() {
           <div className="mt-4 flex flex-wrap gap-3">
             <Link
               href="/contact"
-              className="rounded-md bg-[#c1121f] px-4 py-2 text-xs font-semibold text-white hover:bg-[#8f0e16]"
+              className="rounded-md bg-[#c1121f] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#8f0e16]"
             >
               Request a Quote
             </Link>
+
             <a
               href="tel:+19194292619"
-              className="rounded-md border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold text-white/90 hover:bg-white/10"
+              className="rounded-md border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold text-white/90 transition hover:bg-white/10"
             >
               Call Now
             </a>
           </div>
 
-          {/* Add this once Google Business Profile is claimed */}
-          <p className="mt-4 text-xs text-white/60">
-            {/* Replace the # with your Google Business Profile link later */}
-            <a href="#" className="hover:text-white hover:underline">
-              Find us on Google
-            </a>
-          </p>
+          {/* Only show once Google Business Profile is claimed */}
+          {GOOGLE_BUSINESS_URL ? (
+            <p className="mt-4 text-xs text-white/60">
+              <a
+                href={GOOGLE_BUSINESS_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-white hover:underline"
+              >
+                Find us on Google
+              </a>
+            </p>
+          ) : null}
         </div>
 
         <div className="text-sm">
@@ -55,7 +67,7 @@ export default function Footer() {
 
             <a
               href="mailto:xtreme.concretecutting.demo@gmail.com"
-              className="block break-words hover:text-white hover:underline"
+              className="block break-all sm:break-words hover:text-white hover:underline"
             >
               xtreme.concretecutting.demo@gmail.com
             </a>
@@ -78,21 +90,24 @@ export default function Footer() {
                 Service Areas
               </Link>
             </li>
+
+            {/* These pages may not exist yet. Route to contact to avoid 404s for now. */}
             <li>
-              <Link href="/projects" className="hover:text-white hover:underline">
+              <Link href="/contact" className="hover:text-white hover:underline">
                 Projects
               </Link>
             </li>
             <li>
-              <Link href="/reviews" className="hover:text-white hover:underline">
+              <Link href="/contact" className="hover:text-white hover:underline">
                 Reviews
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-white hover:underline">
+              <Link href="/contact" className="hover:text-white hover:underline">
                 About
               </Link>
             </li>
+
             <li>
               <Link href="/contact" className="hover:text-white hover:underline">
                 Contact
@@ -121,10 +136,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link
-                href="/services#reinforced-wall-cutting"
-                className="hover:text-white hover:underline"
-              >
+              <Link href="/services#reinforced-wall-cutting" className="hover:text-white hover:underline">
                 Reinforced Wall Cutting
               </Link>
             </li>

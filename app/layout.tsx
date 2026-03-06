@@ -2,6 +2,7 @@
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileStickyBar from "@/components/MobileStickyBar";
 
 // Use an env var for the canonical/base URL so previews + SEO stay correct
 // on Netlify during staging and after you connect the real domain.
@@ -163,8 +164,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
 
         <Header />
-        <main>{children}</main>
+        <main className="pb-24 sm:pb-0">{children}</main>
         <Footer />
+        <MobileStickyBar />
       </body>
     </html>
   );
