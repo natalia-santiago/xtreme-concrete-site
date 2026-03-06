@@ -171,45 +171,48 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-[1400px] px-4 py-14 md:px-6">
-        <div className="grid items-center gap-10 lg:grid-cols-2">
-          <div className="overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm">
+        <div className="grid gap-8 lg:grid-cols-2">
+          <div className="overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm lg:h-full">
             <Image
               src="/images/core-drilling-rig.png"
               alt="Professional core drilling equipment"
               width={1200}
-              height={1400}
-              className="h-[420px] w-full object-cover"
+              height={1600}
+              className="h-[420px] w-full object-cover md:h-[560px] lg:h-full"
             />
           </div>
 
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#c1121f]">
-              Professional equipment
-            </p>
+          <div className="grid gap-8 lg:grid-rows-[auto_1fr]">
+            <div className="flex flex-col justify-start rounded-3xl border border-black/10 bg-white p-8 shadow-sm md:p-10">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#c1121f]">
+                Professional equipment
+              </p>
 
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-black md:text-4xl">
-              The right equipment for clean, precise results
-            </h2>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-black md:text-4xl">
+                The right equipment for clean, precise results
+              </h2>
 
-            <p className="mt-4 max-w-2xl text-base leading-7 text-black/75">
-              We use professional-grade equipment to deliver accurate core
-              drilling and concrete cutting work with efficiency, safety, and
-              attention to detail.
-            </p>
+              <p className="mt-4 text-base leading-7 text-black/75">
+                We use professional-grade equipment to deliver accurate core
+                drilling and concrete cutting work with efficiency, safety, and
+                attention to detail.
+              </p>
 
-            <p className="mt-4 max-w-2xl text-base leading-7 text-black/75">
-              The right tools help us complete each project with cleaner cuts,
-              better control, and dependable results for residential,
-              commercial, and industrial jobs.
-            </p>
+              <p className="mt-4 text-base leading-7 text-black/75">
+                The right tools help us complete each project with cleaner cuts,
+                better control, and dependable results for residential,
+                commercial, and industrial jobs.
+              </p>
+            </div>
 
-            <div className="mt-6">
-              <Link
-                href="/contact"
-                className="inline-flex rounded-md bg-[#c1121f] px-5 py-3 font-semibold text-white transition hover:opacity-90"
-              >
-                Request a quote
-              </Link>
+            <div className="overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm">
+              <Image
+                src="/images/core-drilling-action.jpeg"
+                alt="Core drilling machine cutting through concrete"
+                width={1200}
+                height={900}
+                className="h-[260px] w-full object-cover md:h-[320px]"
+              />
             </div>
           </div>
         </div>
