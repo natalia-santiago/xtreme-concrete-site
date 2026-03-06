@@ -171,19 +171,21 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-[1400px] px-4 py-14 md:px-6">
-        <div className="grid gap-8 lg:grid-cols-2">
-          <div className="overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm lg:h-full">
-            <Image
-              src="/images/core-drilling-rig.png"
-              alt="Professional core drilling equipment"
-              width={1200}
-              height={1600}
-              className="h-[420px] w-full object-cover md:h-[560px] lg:h-full"
-            />
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-stretch">
+          <div className="overflow-hidden rounded-3xl border border-black/10 bg-gradient-to-b from-[#fafafa] to-white shadow-sm">
+            <div className="flex h-[520px] items-end justify-center p-6 md:h-[620px]">
+              <Image
+                src="/images/core-drilling-rig.png"
+                alt="Professional core drilling equipment"
+                width={1200}
+                height={1600}
+                className="h-full w-full object-contain object-bottom"
+              />
+            </div>
           </div>
 
-          <div className="grid gap-8 lg:grid-rows-[auto_1fr]">
-            <div className="flex flex-col justify-start rounded-3xl border border-black/10 bg-white p-8 shadow-sm md:p-10">
+          <div className="flex flex-col gap-8">
+            <div className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm md:p-10">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#c1121f]">
                 Professional equipment
               </p>
@@ -205,13 +207,13 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm">
+            <div className="overflow-hidden rounded-3xl border border-black/10 bg-white shadow-xl lg:-mt-20 lg:ml-12">
               <Image
                 src="/images/core-drilling-action.jpeg"
                 alt="Core drilling machine cutting through concrete"
                 width={1200}
                 height={900}
-                className="h-[260px] w-full object-cover md:h-[320px]"
+                className="h-[260px] w-full object-cover object-center md:h-[320px]"
               />
             </div>
           </div>
