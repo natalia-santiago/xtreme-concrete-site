@@ -69,16 +69,6 @@ export default function Home() {
     <>
       <HeroSlider />
 
-      {/* TRUST BAR */}
-      <section className="border-y border-black/10 bg-white">
-        <div className="mx-auto flex max-w-[1400px] flex-col gap-4 px-4 py-4 text-sm font-medium text-black/75 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-8">
-          <p>Fast scheduling</p>
-          <p>Clean, precise cutting</p>
-          <p>Safety-first work</p>
-          <p>Serving Eastern North Carolina</p>
-        </div>
-      </section>
-
       {/* ABOUT */}
       <section className="mx-auto max-w-[1400px] px-4 py-14 md:px-6">
         <div className="grid items-center gap-10 lg:grid-cols-2">
