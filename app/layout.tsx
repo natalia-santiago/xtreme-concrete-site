@@ -4,9 +4,7 @@ import Footer from "@/components/Footer";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Script from "next/script";
 
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "") ||
-  "https://xtremeconcretecutting.netlify.app";
+const SITE_URL = "https://xtremeconcretecutting.com";
 
 const BUSINESS_NAME = "Xtreme Concrete Cutting & Demolition LLC";
 const BUSINESS_PHONE = "+1-252-582-6094";
