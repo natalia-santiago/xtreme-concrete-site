@@ -56,10 +56,10 @@ export default function Header() {
             <span className="opacity-80">•</span>
 
             <a
-              href="mailto:xtreme.concretecutting.demo@gmail.com"
+              href="mailto:info@xtremeconcretecutting.com"
               className="hover:underline break-all sm:break-normal"
             >
-              xtreme.concretecutting.demo@gmail.com
+              info@xtremeconcretecutting.com
             </a>
           </div>
         </div>
