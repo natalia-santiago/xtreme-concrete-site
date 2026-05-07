@@ -73,13 +73,14 @@ export default function Header() {
           {/* LOGO + NAME */}
           <Link href="/" className="flex items-center gap-3">
 
-            <Image
-              src="/logo-transparent.png"
-              alt="Xtreme Concrete Cutting & Demolition"
-              width={70}
-              height={70}
-              priority
-            />
+          <Image
+            src="/logo-transparent.png"
+            alt="Xtreme Concrete Cutting & Demolition"
+            width={70}
+            height={70}
+            priority
+            unoptimized
+          />
 
             <div className="leading-tight">
               <p className="text-lg font-extrabold tracking-tight">
