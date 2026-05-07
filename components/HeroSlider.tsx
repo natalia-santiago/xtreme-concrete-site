@@ -18,7 +18,7 @@ export default function HeroSlider() {
   const slides: Slide[] = useMemo(
     () => [
       {
-        src: "/hero/slide-1.png",
+        src: "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778181437/slide-1_xdqt2q.png",
         alt: "Excavator performing demolition on a job site",
         eyebrow: "Xtreme Concrete Cutting & Demolition",
         title: "Demolition done safely, cleanly, and on schedule.",
@@ -28,7 +28,7 @@ export default function HeroSlider() {
         secondaryCta: { label: "Call (252) 582-6094", href: "tel:+12525826094" },
       },
       {
-        src: "/hero/slide-2.png",
+        src: "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778181437/slide-2_dgegct.png",
         alt: "Worker using a handheld concrete saw for cutting",
         eyebrow: "Concrete Cutting",
         title: "Precise concrete cutting for clean results.",
@@ -38,7 +38,7 @@ export default function HeroSlider() {
         secondaryCta: { label: "View Services", href: "/services" },
       },
       {
-        src: "/hero/slide-3.png",
+        src: "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778181438/slide-3_owwqyg.png",
         alt: "Wet concrete saw cutting through a slab",
         eyebrow: "Fast • Reliable • Professional",
         title: "From demo to cut lines — we handle the tough work.",

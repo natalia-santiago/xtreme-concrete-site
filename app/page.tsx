@@ -10,27 +10,27 @@ const services = [
   {
     title: "Core Drilling",
     desc: "Precision drilling for plumbing, electrical, HVAC, and structural penetrations.",
-    img: "/images/core-drilling.jpeg",
+    img: "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778181447/core-drilling_msfpw7.jpg",
   },
   {
     title: "Concrete Slab Cutting",
     desc: "Flat sawing for floors, roads, driveways, and commercial slabs.",
-    img: "/images/slab-cutting.jpeg",
+    img: "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778181452/slab-cutting_uixrgg.jpg",
   },
   {
     title: "Concrete Wall Cutting",
     desc: "Clean openings for doors, windows, and utilities in concrete walls.",
-    img: "/images/safety.jpg",
+    img: "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778181455/safety_fciste.jpg",
   },
   {
     title: "Reinforced Wall Cutting",
     desc: "Specialized cutting for heavily reinforced structural concrete.",
-    img: "/images/reinforced-wall-cutting.png",
+    img: "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778181452/reinforced-wall-cutting_e0laae.png",
   },
   {
     title: "Building Demolition",
     desc: "Safe demolition and concrete removal for renovation and rebuild projects.",
-    img: "/images/demolition.jpg",
+    img: "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778181457/demolition_hjjagj.jpg",
   },
 ];
 
@@ -121,7 +121,7 @@ export default function Home() {
 
           <div className="overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm">
             <Image
-              src="/images/demolition.jpg"
+              src="https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778181457/demolition_hjjagj.jpg"
               alt="Concrete demolition project"
               width={1200}
               height={900}
@@ -201,7 +201,7 @@ export default function Home() {
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <div className="overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm">
             <Image
-              src="/images/core-drilling-rig.png"
+              src="https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778181450/core-drilling-rig_gb1g7f.png"
               alt="Professional core drilling machine"
               width={1200}
               height={900}
@@ -247,7 +247,7 @@ export default function Home() {
 
             <div className="overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm">
               <Image
-                src="/images/core-drilling-action.jpeg"
+                src="https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778181447/core-drilling-action_o5oo10.jpg"
                 alt="Concrete core drilling in action"
                 width={1200}
                 height={900}
