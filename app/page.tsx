@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import HeroSlider from "@/components/HeroSlider";
@@ -31,6 +32,21 @@ const services = [
     title: "Building Demolition",
     desc: "Safe demolition and concrete removal for renovation and rebuild projects.",
     img: "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778181457/demolition_hjjagj.jpg",
+  },
+];
+
+const projectImages = [
+  {
+    src: "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1781311631/projectA_mif2il.jpg",
+    alt: "Recent concrete core drilling project",
+  },
+  {
+    src: "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1781311631/projectB_tt8z6j.jpg",
+    alt: "Concrete coring project with professional drilling equipment",
+  },
+  {
+    src: "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1781311633/projectC_emaqkm.jpg",
+    alt: "Completed concrete coring work on a commercial project",
   },
 ];
 
@@ -69,6 +85,10 @@ function trackEvent(eventName: string, eventLabel: string) {
 }
 
 export default function Home() {
+  const [selectedProjectImage, setSelectedProjectImage] = useState<
+    (typeof projectImages)[number] | null
+  >(null);
+
   return (
     <>
       <HeroSlider />
@@ -110,7 +130,10 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
                 onClick={() =>
-                  trackEvent("google_reviews_click", "Homepage About Reviews Button")
+                  trackEvent(
+                    "google_reviews_click",
+                    "Homepage About Reviews Button",
+                  )
                 }
                 className="inline-flex rounded-md border border-black/15 px-5 py-3 font-semibold text-black transition hover:border-black/30 hover:bg-black/[0.02]"
               >
@@ -196,6 +219,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FEATURED PROJECT */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-[1400px] px-4 py-14 md:px-6">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#c1121f]">
+              Featured Project
+            </p>
+
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-black md:text-4xl">
+              Commercial Concrete Coring
+            </h2>
+
+            <p className="mt-4 text-base leading-7 text-black/70">
+              A recent commercial concrete coring project completed using
+              professional core drilling equipment.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {projectImages.map((image) => (
+              <button
+                key={image.src}
+                type="button"
+                onClick={() => setSelectedProjectImage(image)}
+                className="group overflow-hidden rounded-[28px] border border-black/10 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+                aria-label="Open project image"
+              >
+                <div className="relative aspect-[3/4] w-full bg-[#f7f7f7]">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover object-center transition duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* EQUIPMENT */}
       <section className="mx-auto max-w-[1400px] px-4 py-14 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
@@ -221,15 +286,15 @@ export default function Home() {
               </h2>
 
               <p className="mt-4 text-base leading-7 text-black/75">
-                We use professional-grade equipment to deliver accurate core drilling
-                and concrete cutting work with efficiency, safety, and attention to
-                detail.
+                We use professional-grade equipment to deliver accurate core
+                drilling and concrete cutting work with efficiency, safety, and
+                attention to detail.
               </p>
 
               <p className="mt-4 text-base leading-7 text-black/75">
                 The right tools help us complete each project with cleaner cuts,
-                better control, and dependable results for residential, commercial,
-                and industrial jobs.
+                better control, and dependable results for residential,
+                commercial, and industrial jobs.
               </p>
 
               <div className="mt-6 rounded-2xl border border-black/10 bg-[#f7f7f7] p-5">
@@ -284,7 +349,10 @@ export default function Home() {
                   target="_blank"
                   rel="noreferrer"
                   onClick={() =>
-                    trackEvent("google_reviews_click", "Homepage GBP Section Button")
+                    trackEvent(
+                      "google_reviews_click",
+                      "Homepage GBP Section Button",
+                    )
                   }
                   className="inline-flex rounded-md bg-[#c1121f] px-5 py-3 font-semibold text-white transition hover:opacity-90"
                 >
@@ -310,11 +378,19 @@ export default function Home() {
               </p>
 
               <div className="mt-6 grid grid-cols-2 gap-3 text-sm text-black/75">
-                <div className="rounded-2xl bg-[#f7f7f7] px-4 py-3">Goldsboro</div>
-                <div className="rounded-2xl bg-[#f7f7f7] px-4 py-3">Raleigh</div>
+                <div className="rounded-2xl bg-[#f7f7f7] px-4 py-3">
+                  Goldsboro
+                </div>
+                <div className="rounded-2xl bg-[#f7f7f7] px-4 py-3">
+                  Raleigh
+                </div>
                 <div className="rounded-2xl bg-[#f7f7f7] px-4 py-3">Wilson</div>
-                <div className="rounded-2xl bg-[#f7f7f7] px-4 py-3">Kinston</div>
-                <div className="rounded-2xl bg-[#f7f7f7] px-4 py-3">Smithfield</div>
+                <div className="rounded-2xl bg-[#f7f7f7] px-4 py-3">
+                  Kinston
+                </div>
+                <div className="rounded-2xl bg-[#f7f7f7] px-4 py-3">
+                  Smithfield
+                </div>
                 <div className="rounded-2xl bg-[#f7f7f7] px-4 py-3">Selma</div>
               </div>
 
@@ -413,7 +489,9 @@ export default function Home() {
 
               <a
                 href="tel:+12525826094"
-                onClick={() => trackEvent("phone_call_click", "Homepage CTA Phone")}
+                onClick={() =>
+                  trackEvent("phone_call_click", "Homepage CTA Phone")
+                }
                 className="inline-flex rounded-xl border border-white/40 px-7 py-4 text-lg font-semibold text-white transition hover:bg-white/10"
               >
                 Or call: (252) 582-6094
@@ -422,6 +500,38 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {selectedProjectImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 px-4 py-8"
+          onClick={() => setSelectedProjectImage(null)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            type="button"
+            onClick={() => setSelectedProjectImage(null)}
+            className="absolute right-5 top-5 rounded-full bg-white px-4 py-2 text-sm font-bold text-black transition hover:bg-[#f7f7f7]"
+            aria-label="Close project image"
+          >
+            Close
+          </button>
+
+          <div
+            className="relative h-[82vh] w-full max-w-6xl"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <Image
+              src={selectedProjectImage.src}
+              alt={selectedProjectImage.alt}
+              fill
+              className="object-contain"
+              sizes="100vw"
+              priority
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }
