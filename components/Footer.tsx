@@ -90,8 +90,8 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/projects-new" className="hover:text-white">
-                Projects - New
+              <Link href="/projects" className="hover:text-white">
+                Projects
               </Link>
             </li>
             <li>
