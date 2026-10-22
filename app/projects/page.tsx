@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const projects - new = [
+const projects = [
   {
     id: "core-drilling",
     title: "Core Drilling",
