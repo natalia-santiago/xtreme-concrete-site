@@ -89,7 +89,7 @@ export default function Footer() {
                 Service Areas
               </Link>
             </li>
- <li>
+            <li>
               <Link href="/projects - new" className="hover:text-white">
                 Projects - New
               </Link>
