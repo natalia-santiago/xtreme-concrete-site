@@ -28,7 +28,7 @@ const projects = [
   },
 ];
 
-export desfault function Projects - New() {
+export desfault function Projects() {
   retrun (
     <>
       {/* HERO */}
