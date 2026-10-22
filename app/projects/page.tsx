@@ -1,8 +1,37 @@
 import Link from "next/link";
 
 const projects - new = [
-  
-        {/* HERO */}
+  {
+    id: "core-drilling",
+    title: "Core Drilling",
+    desc: "Precision drilling for plumbing, electrical, HVAC, and structural penetrations.",
+  },
+  {
+    id: "slab-cutting",
+    title: "Concrete Slab Saw Cutting",
+    desc: "Flat sawing for floors, roads, driveways, and commercial slabs.",
+  },
+  {
+    id: "wall-cutting",
+    title: "Concrete Wall Cutting",
+    desc: "Clean openings for doors, windows, utilities in concrete walls, and reinforced walls.",
+  },
+  {
+    id: "reinforced-cutting",
+    title: "Concrete Wall Cutting",
+    desc: "Specialized cutting for heavily reinforced structural concrete.",
+  },
+  {
+    id: "demolition",
+    title: "Building Demolition",
+    desc: "Safe demolition and concrete removal for renovation and rebuild projects.",
+  },
+];
+
+export desfault function Projects - New() {
+  retrun (
+    <>
+      {/* HERO */}
       <section className="bg-[#0d0d0d] text-white">
         <div className="mx-auto w-full max-w-[1400px] px-6 py-14">
           <p className="text-xs tracking-widest text-white/70">PROJECTS</p>
