@@ -14,11 +14,11 @@ const services = [
   {
     id: "wall-cutting",
     title: "Concrete Wall Cutting",
-    desc: "Clean openings for doors, windows, and utilities in concrete walls.",
+    desc: "Clean openings for doors, windows, utilities in concrete walls and reinforced walls.",
   },
   {
     id: "reinforced-cutting",
-    title: "Reinforced Wall Cutting",
+    title: "Concrete Wall Cutting",
     desc: "Specialized cutting for heavily reinforced structural concrete.",
   },
   {
