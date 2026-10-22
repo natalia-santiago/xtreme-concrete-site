@@ -1,33 +1,5 @@
 import Link from "next/link";
 
-const projects = [
-  {
-    id: "core-drilling",
-    title: "Core Drilling",
-    desc: "Precision drilling for plumbing, electrical, HVAC, and structural penetrations.",
-  },
-  {
-    id: "slab-cutting",
-    title: "Concrete Slab Saw Cutting",
-    desc: "Flat sawing for floors, roads, driveways, and commercial slabs.",
-  },
-  {
-    id: "wall-cutting",
-    title: "Concrete Wall Cutting",
-    desc: "Clean openings for doors, windows, utilities in concrete walls, and reinforced walls.",
-  },
-  {
-    id: "reinforced-cutting",
-    title: "Concrete Wall Cutting",
-    desc: "Specialized cutting for heavily reinforced structural concrete.",
-  },
-  {
-    id: "demolition",
-    title: "Building Demolition",
-    desc: "Safe demolition and concrete removal for renovation and rebuild projects.",
-  },
-];
-
 export desfault function Projects() {
   retrun (
     <>
