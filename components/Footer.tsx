@@ -106,7 +106,7 @@ export default function Footer() {
           <h3 className="text-base font-semibold">Services</h3>
           <ul className="mt-4 space-y-3 text-sm text-white/75">
             <li>Core Drilling</li>
-            <li>Concrete Slab Cutting</li>
+            <li>Concrete Slab Saw Cutting</li>
             <li>Concrete Wall Cutting</li>
             <li>Reinforced Wall Cutting</li>
             <li>Building Demolition</li>
