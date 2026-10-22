@@ -1,9 +1,8 @@
 import Link from "next/link";
 
 const projects - new = [
-  return (
-    <>
-      {/* HERO */}
+  
+        {/* HERO */}
       <section className="bg-[#0d0d0d] text-white">
         <div className="mx-auto w-full max-w-[1400px] px-6 py-14">
           <p className="text-xs tracking-widest text-white/70">PROJECTS</p>
