@@ -8,7 +8,7 @@ const services = [
   },
   {
     id: "slab-cutting",
-    title: "Concrete Slab Cutting",
+    title: "Concrete Slab Saw Cutting",
     desc: "Flat sawing for floors, roads, driveways, and commercial slabs.",
   },
   {
