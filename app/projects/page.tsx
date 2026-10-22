@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-export desfault function Projects() {
-  retrun (
+export desfault function ProjectsPage() {
+  return (
     <>
       {/* HERO */}
       <section className="bg-[#0d0d0d] text-white">
