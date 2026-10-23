@@ -52,7 +52,13 @@ export default function ProjectsPage() {
               As jobs are completed, we’ll add before/after photos, a brief scope summary, and
               service type. Until then, you can review our services and process below.
             </p>
-
+<div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link
+              href="/Project List"
+              className="rounded-md bg-[#c1121f] px-6 py-3 text-center text-sm font-semibold text-white hover:bg-[#8f0e16]"
+            >
+              Projects List
+            </Link>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               {[
                 ["Concrete Cutting", "Slab + wall openings, trench cuts, and clean edges."],
