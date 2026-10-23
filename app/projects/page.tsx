@@ -67,7 +67,7 @@ export default function ProjectsPage() {
 
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/services"
+                href="/projectlist"
                 className="rounded-md border border-black/15 bg-white px-6 py-3 text-sm font-semibold hover:bg-black/[0.02]"
               >
                 View Project List
