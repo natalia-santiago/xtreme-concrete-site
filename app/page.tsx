@@ -21,7 +21,7 @@ const services = [
   {
     title: "Concrete Wall Cutting",
     desc: "Clean openings for doors, windows, and utilities in concrete walls.",
-    img: "https://github.com/natalia-santiago/xtreme-concrete-site/blob/main/public/images/McKim$Creednew.png",
+    img: "https://res.cloudinary.com/dwvmjpgxh/image/upload/q_auto/f_auto/v1778181455/safety_fciste.jpg",
   },
   {
     title: "Reinforced Wall Cutting",
