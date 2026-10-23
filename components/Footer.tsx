@@ -113,7 +113,6 @@ export default function Footer() {
             <li>Core Drilling</li>
             <li>Concrete Slab Saw Cutting</li>
             <li>Concrete Wall Cutting</li>
-            <li>Reinforced Wall Cutting</li>
             <li>Building Demolition</li>
           </ul>
         </div>
