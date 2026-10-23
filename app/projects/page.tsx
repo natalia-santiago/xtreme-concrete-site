@@ -10,11 +10,11 @@ export default function ProjectsPage() {
 
           <h1 className="mt-4 text-4xl font-extrabold leading-tight md:text-5xl">
             Project portfolio
-            <span className="text-[#c1121f]"> coming soon</span>
+            <span className="text-[#c1121f]"> New </span>
           </h1>
 
           <p className="mt-4 max-w-3xl text-sm text-white/70">
-            We’re currently building our online portfolio. As we complete projects, we’ll post
+            xTreme Project portfolio. Complete projects,
             before/after photos, scope details, timelines, and materials used.
           </p>
 
@@ -45,7 +45,7 @@ export default function ProjectsPage() {
       {/* CONTENT */}
       <section className="bg-white">
         <div className="mx-auto w-full max-w-[1400px] px-6 py-12">
-          {/* Portfolio coming soon */}
+          {/* Portfolio  */}
           <section className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
             <h2 className="text-2xl font-bold">Portfolio coming soon</h2>
             <p className="mt-2 max-w-3xl text-sm text-black/70">
