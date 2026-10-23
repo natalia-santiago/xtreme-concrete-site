@@ -14,7 +14,7 @@ export default function ProjectsPage() {
           </h1>
 
           <p className="mt-4 max-w-3xl text-sm text-white/70">
-            xTreme Project portfolio. Complete projects,
+            XTreme Project portfolio. Complete projects,
             before/after photos, scope details, timelines, and materials used.
           </p>
 
