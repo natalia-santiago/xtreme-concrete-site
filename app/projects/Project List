@@ -9,13 +9,12 @@ export default function ProjectsPage() {
           <p className="text-xs tracking-widest text-white/70">PROJECTS</p>
 
           <h1 className="mt-4 text-4xl font-extrabold leading-tight md:text-5xl">
-            Project portfolio
-            <span className="text-[#c1121f]"> coming soon</span>
+            Project List
+            <span className="text-[#c1121f]"> New </span>
           </h1>
 
           <p className="mt-4 max-w-3xl text-sm text-white/70">
-            We’re currently building our online portfolio. As we complete projects, we’ll post
-            before/after photos, scope details, timelines, and materials used.
+           Before and After
           </p>
 
           {/* Free estimate badge */}
