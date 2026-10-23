@@ -9,7 +9,7 @@ const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/service-areas", label: "Service Areas" },
   { href: "/contact", label: "Request a Quote" },
-  { href: "/Projects", label: "Projects" },
+  { href: "/projects", label: "Projects" },
 ];
 
 function MenuIcon() {
