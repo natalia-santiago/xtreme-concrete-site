@@ -47,7 +47,7 @@ export default function ProjectsPage() {
         <div className="mx-auto w-full max-w-[1400px] px-6 py-12">
           {/* Portfolio  */}
           <section className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
-            <h2 className="text-2xl font-bold">Portfolio coming soon</h2>
+            <h2 className="text-2xl font-bold">Portfolio</h2>
             <p className="mt-2 max-w-3xl text-sm text-black/70">
               As jobs are completed, we’ll add before/after photos, a brief scope summary, and
               service type. Until then, you can review our services and process below.
